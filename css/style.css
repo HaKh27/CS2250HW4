@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+    "title title title title "
+    "adiv cdiv ddiv bdiv"
+    "foot foot foot foot ";
+}
+
+div{
+    display: inline-block;
+	vertical-align: top;
+	background-color: #f0eded;
+	border: 2px solid #c5c1c1;
+	margin: 10px;
+	padding: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(252, 255, 255);
+    border: 1px solid #c5c1c1;
+    margin: 1px;
+    padding: 4px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+li:hover{
+    background-color: rgb(226, 229, 230);
+}
+
+#MyTitle {
+    text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+    grid-area: title;
+}
+
+#Adiv{
+    grid-area: adiv;
+}
+
+#Bdiv{
+    grid-area: bdiv;
+}
+
+#Cdiv{
+    grid-area: cdiv;
+}
+
+#Ddiv{
+    grid-area: ddiv;
+}
+
+#MyFoot  {
+    text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+    grid-area: foot ;
+}
+
+@media (min-width: 1024px) {
+    body{
+        grid-template-areas:
+        "title title title title "
+        "adiv cdiv ddiv bdiv"
+        "foot foot foot foot ";
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body{
+        grid-template-areas:
+        "title title "
+        "adiv bdiv"
+        "cdiv ddiv"
+        "foot foot ";
+    }
+}
+
+@media screen and (max-width: 440px) {
+    body{
+        grid-template-areas:
+        "title"
+        "adiv"
+        "bdiv"
+        "cdiv"
+        "ddiv"
+        "foot";
+    }
+}
